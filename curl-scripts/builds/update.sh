@@ -5,7 +5,6 @@ curl --include --request PATCH "http://localhost:4741/builds/${ID}" \
       "build": {
         "name": "'"${NAME}"'",
         "description": "'"${DESCRIPTION}"'",
-        "budget": "'"${BUDGET}"'",
-        "user_id": "'"${USER_ID}"'"
+        "budget": "'"${BUDGET}"'"
       }
   }'

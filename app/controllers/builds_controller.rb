@@ -39,6 +39,7 @@ class BuildsController < ProtectedController
   end
 
   private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_build
     @build = current_user.builds.find(params[:id])
@@ -46,6 +47,6 @@ class BuildsController < ProtectedController
 
   # Only allow a trusted parameter "white list" through.
   def build_params
-    params.require(:build).permit(:name, :description, :budget, :user_id)
+    params.require(:build).permit(:name, :description, :budget)
   end
 end

@@ -15,7 +15,7 @@ class PartsController < ProtectedController
 
   # POST /parts
   def create
-    @part = current_user.parts.build(part_params)
+    @part = current_user.builds.find(params[:part][:build_id]).parts.build(part_params)
 
     if @part.save
       render json: @part, status: :created, location: @part
@@ -39,9 +39,10 @@ class PartsController < ProtectedController
   end
 
   private
+
   # Use callbacks to share common setup or constraints between actions.
   def set_part
-    @part = current_user.parts.find(params[:id])
+    @part = current_user.builds.find(params[:part][:build_id]).parts.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.

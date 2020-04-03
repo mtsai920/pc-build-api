@@ -5,7 +5,6 @@ curl --include --request POST "http://localhost:4741/builds/" \
       "build": {
         "name": "'"${NAME}"'",
         "description": "'"${DESCRIPTION}"'",
-        "budget": "'"${BUDGET}"'",
-        "user_id": "'"${USER_ID}"'"
+        "budget": "'"${BUDGET}"'"
       }
   }'
