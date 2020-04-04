@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :builds
   resources :parts, except: %i[new edit]
   resources :builds, except: %i[new edit]
   # RESTful routes

@@ -7,6 +7,6 @@ curl --include --request POST "http://localhost:4741/parts/" \
         "part_type": "'"${TYPE}"'",
         "description": "'"${DESCRIPTION}"'",
         "cost": "'"${COST}"'",
-        "build_id": "'"${BUILD_ID}"'"
+        "build_id": "'"${BUILDID}"'"
       }
   }'

@@ -5,6 +5,14 @@ curl --include --request POST "http://localhost:4741/builds/" \
       "build": {
         "name": "'"${NAME}"'",
         "description": "'"${DESCRIPTION}"'",
-        "budget": "'"${BUDGET}"'"
+        "budget": "'"${BUDGET}"'",
+        "cpu": "'"${CPU}"'",
+        "gpu": "'"${GPU}"'",
+        "motherboard": "'"${MOBO}"'",
+        "ram": "'"${RAM}"'",
+        "cooler": "'"${COOLER}"'",
+        "power_supply": "'"${PSU}"'",
+        "storage": "'"${STORAGE}"'",
+        "other": "'"${OTHER}"'"
       }
   }'

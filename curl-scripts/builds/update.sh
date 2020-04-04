@@ -5,6 +5,14 @@ curl --include --request PATCH "http://localhost:4741/builds/${ID}" \
       "build": {
         "name": "'"${NAME}"'",
         "description": "'"${DESCRIPTION}"'",
-        "budget": "'"${BUDGET}"'"
+        "budget": "'"${BUDGET}"'",
+        "cpu": "'"${CPU}"'",
+        "gpu": "'"${GPU}"'",
+        "motherboard": "'"${MOBO}"'",
+        "ram": "'"${RAM}"'",
+        "cooler": "'"${COOLER}"'",
+        "power_supply": "'"${PSU}"'",
+        "storage": "'"${STORAGE}"'",
+        "other": "'"${OTHER}"'"
       }
   }'

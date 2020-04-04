@@ -47,6 +47,8 @@ class BuildsController < ProtectedController
 
   # Only allow a trusted parameter "white list" through.
   def build_params
-    params.require(:build).permit(:name, :description, :budget)
+    params.require(:build).permit(:name, :description, :budget, :cpu, :gpu,
+                                  :motherboard, :ram, :cooler, :power_supply,
+                                  :storage, :other, :user_id)
   end
 end

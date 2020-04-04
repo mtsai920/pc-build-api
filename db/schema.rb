@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_02_160335) do
+ActiveRecord::Schema.define(version: 2020_04_04_195711) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,14 @@ ActiveRecord::Schema.define(version: 2020_04_02_160335) do
     t.string "name"
     t.string "description"
     t.integer "budget"
+    t.string "cpu"
+    t.string "gpu"
+    t.string "motherboard"
+    t.string "ram"
+    t.string "cooler"
+    t.string "power_supply"
+    t.string "storage"
+    t.string "other"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -33,17 +41,6 @@ ActiveRecord::Schema.define(version: 2020_04_02_160335) do
     t.index ["user_id"], name: "index_examples_on_user_id"
   end
 
-  create_table "parts", force: :cascade do |t|
-    t.string "name"
-    t.string "part_type"
-    t.integer "cost"
-    t.string "description"
-    t.bigint "build_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["build_id"], name: "index_parts_on_build_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "token", null: false
@@ -56,5 +53,4 @@ ActiveRecord::Schema.define(version: 2020_04_02_160335) do
 
   add_foreign_key "builds", "users"
   add_foreign_key "examples", "users"
-  add_foreign_key "parts", "builds"
 end
