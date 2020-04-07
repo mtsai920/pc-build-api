@@ -16,3 +16,6 @@ There are still a few things I want to fix, mainly:
 
 ### Technologies used:
 HTML, CSS, JavaScript, jQuery, Bootstrap, Handlebars, Sass, Ruby, Rails
+
+### ERD
+Link to ERD [here](https://imgur.com/a/2POObvu) 
